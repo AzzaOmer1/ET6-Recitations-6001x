@@ -55,3 +55,26 @@ print(flatten(['hello', ['world', ['!']]]))
    # If the item is a list, recursively flatten it and extend newList with the result
            
    # Return the flattened list
+
+def flatten(aList):
+    '''
+    aList: a list
+    Returns a copy of aList, which is a flattened version of aList
+    '''
+    # Initialize an empty list to store the flattened elements
+list_flat =[]
+   # If the item is not a list, add it directly to newList
+    for i in aList :
+        if type(i) is list:
+        #if isinstance(i,list):
+           list_flat.extend(flatten(i)) 
+       
+   # If the item is a list, recursively flatten it and extend newList with the result
+        else:
+            list_flat.append(i)
+   # Return the flattened list
+
+    return list_flat
+
+#list_flat=[]
+print(flatten([[1, 'a', ['cat'], 2], [[[3]], 'dog'], 4, 5]))
