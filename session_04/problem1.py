@@ -35,7 +35,7 @@ Instructions:
 4. Return sum as the final result.
 """
 #problem 1
-
+# code 
 def dotProduct(listA, listB):
     '''
     listA: a list of numbers
