@@ -62,3 +62,29 @@ print(keysWithValue(aDict, 50))
     # Sort the list of keys in increasing order
 
     # Return the sorted list
+
+
+def keysWithValue(aDict, target):
+    '''
+    aDict: a dictionary
+    target: an integer
+    Returns: a list of keys in aDict with the value target, sorted in increasing order.
+    '''
+    
+    
+    # Initialize an empty list to store matching keys
+    result_list = []
+    # Iterate through each key in the dictionary
+    for i in aDict.keys():
+    # Check if the value matches the target
+        if aDict[i] == target:
+            # Append the key to the result list
+           result_list.append(i) 
+    
+    
+    # Sort the list of keys in increasing order
+    sorted(result_list)
+    # Return the sorted list
+    return result_list
+aDict = {5: 1, 3: 90, 4: 90, 12: 90, 22: 90, 21: 100}
+print(keysWithValue(aDict, 50))
